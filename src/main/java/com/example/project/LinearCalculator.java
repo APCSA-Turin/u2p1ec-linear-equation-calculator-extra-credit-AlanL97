@@ -141,14 +141,14 @@ public class LinearCalculator{
     //return "No symmetry";
     public String findSymmetry() {
         if (x1*-1 == x2) {
-            if (y1*-1 == y2) {
+            if (y1*-1 == y2) { //if x1 and y1 are opposite of x2 and y2, then they are symmetric about the origin
                 return "Symmetric about the origin";
-            } else {
+            } else { //if only x1 is opposite of x2, then it is symmetric about the y-axis
                 return "Symmetric about the y-axis";
             }
-        } else if (y1*-1 == y2) {
+        } else if (y1*-1 == y2) { //if only y1 is opposite of y2, then it is symmetric about the x-axis
             return "Symmetric about the x-axis";
-        } else {
+        } else { //if x1 is not opposite of x2 and y1 is not opposite of y2, then there is no symmetry
             return "No symmetry";
         }
     }
@@ -156,7 +156,7 @@ public class LinearCalculator{
     //Midpoint()->return a string 
     //the method should calculate the midpoint between the two points
     //it should return "The midpoint of this line is: (0,0)";
-    public String Midpoint() {
+    public String Midpoint() { //midpoint formula is ((x1+x2)/2, (y1+y2/2))
         double midX = (x1+x2)/2;
         double midY = (y1+y2)/2;
         return "The midpoint of this line is: (" + midX + "," + midY + ")";
